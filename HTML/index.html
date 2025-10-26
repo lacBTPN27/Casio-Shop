@@ -1,109 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    
 </head>
-
 <body>
-    <!-- Header sẽ được load bằng JavaScript -->
+     <!-- Header sẽ được load bằng JavaScript -->
     <div id="header"></div>
+ <main>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Đồng Hồ Casio Chính Hãng</h1>
-            <p>
-                Khám phá bộ sưu tập đồng hồ Casio đa dạng với công nghệ tiên tiến, thiết kế hiện đại
-                và giá cả cạnh tranh.
-            </p>
-            <div class="hero-buttons">
-                <!-- Nút chuyển sang trang cửa hàng -->
-                <div class="hero-buttons">
-                    <a href="/HTML/shop.html"><button class="btn btn-primary">Mua sắm ngay → </button></a>
-                    <a href="/HTML/contact.html"><button class="btn btn-secondary">Tìm hiểu thêm</button></a>
-                </div>
-            </div>
+      <div class="hero-content">
+        <h1>Đồng Hồ Casio Chính Hãng</h1>
+        <p>
+          Khám phá bộ sưu tập đồng hồ Casio đa dạng với công nghệ tiên tiến, thiết kế hiện đại
+          và giá cả cạnh tranh.
+        </p>
+        <div class="hero-buttons">
+          <a href="/HTML/shop.html"><button class="btn btn-primary">Mua sắm ngay →</button></a>
+          <a href="/HTML/contact.html"><button class="btn btn-secondary">Tìm hiểu thêm</button></a>
+        </div>
+      </div>
     </section>
 
     <!-- Features -->
     <section class="features">
-        <div class="feature">
-            <div class="icon blue"><i class="fa-solid fa-shield-halved"></i></div>
-            <div>
-                <h3>100% Chính hãng</h3>
-                <p>Cam kết sản phẩm chính hãng, bảo hành toàn cầu</p>
-            </div>
+      <div class="feature">
+        <div class="icon blue"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <h3>100% Chính hãng</h3>
+          <p>Cam kết sản phẩm chính hãng, bảo hành toàn cầu</p>
         </div>
-        <div class="feature">
-            <div class="icon cyan"><i class="fa-solid fa-truck"></i></div>
-            <div>
-                <h3>Miễn phí vận chuyển</h3>
-                <p>Giao hàng miễn phí toàn quốc cho đơn từ 2 triệu</p>
-            </div>
+      </div>
+      <div class="feature">
+        <div class="icon cyan"><i class="fa-solid fa-truck"></i></div>
+        <div>
+          <h3>Miễn phí vận chuyển</h3>
+          <p>Giao hàng miễn phí toàn quốc cho đơn từ 2 triệu</p>
         </div>
-        <div class="feature">
-            <div class="icon blue"><i class="fa-solid fa-award"></i></div>
-            <div>
-                <h3>Bảo hành 5 năm</h3>
-                <p>Bảo hành chính hãng lên đến 5 năm</p>
-            </div>
+      </div>
+      <div class="feature">
+        <div class="icon blue"><i class="fa-solid fa-award"></i></div>
+        <div>
+          <h3>Bảo hành 5 năm</h3>
+          <p>Bảo hành chính hãng lên đến 5 năm</p>
         </div>
+      </div>
     </section>
 
     <!-- Featured Products -->
     <section class="featured">
-        <h2>Sản phẩm nổi bật</h2>
-        <p>Khám phá những mẫu đồng hồ được yêu thích nhất</p>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/250x250" alt="Casio G-Shock">
-                <h3>Casio G-Shock GA-2100</h3>
-                <p class="desc">Nam • Dây cao su</p>
-                <p class="price">3.200.000₫</p>
-                <a href="product.html" class="btn btn-outline">
-                    Xem chi tiết <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-        <div class="center">
-            <a href="shop.html" class="btn btn-outline">
-                Xem tất cả sản phẩm <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
+      <h2>Sản phẩm nổi bật</h2>
+      <p>Khám phá những mẫu đồng hồ được yêu thích nhất</p>
+
+      <div class="product-grid" id="featured-products">
+        <!-- Sản phẩm load từ db.json -->
+      </div>
+
+      <div class="center">
+        <a href="/HTML/shop.html" class="btn btn-outline">
+          Xem tất cả sản phẩm <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
     </section>
 
     <!-- Categories -->
     <section class="categories">
-        <h2>Danh mục sản phẩm</h2>
-        <p>Tìm kiếm theo dòng sản phẩm yêu thích</p>
-        <div class="category-grid">
-            <div class="category-item"><span>G</span>
-                <h3>G-Shock</h3>
-            </div>
-            <div class="category-item"><span>E</span>
-                <h3>Edifice</h3>
-            </div>
-            <div class="category-item"><span>B</span>
-                <h3>Baby-G</h3>
-            </div>
-            <div class="category-item"><span>P</span>
-                <h3>Pro Trek</h3>
-            </div>
-            <div class="category-item"><span>V</span>
-                <h3>Vintage</h3>
-            </div>
-        </div>
+      <h2>Danh mục sản phẩm</h2>
+      <p>Tìm kiếm theo dòng sản phẩm yêu thích</p>
+      <div class="category-grid">
+        <div class="category-item"><span>G</span><h3>G-Shock</h3></div>
+        <div class="category-item"><span>E</span><h3>Edifice</h3></div>
+        <div class="category-item"><span>B</span><h3>Baby-G</h3></div>
+        <div class="category-item"><span>P</span><h3>Pro Trek</h3></div>
+        <div class="category-item"><span>V</span><h3>Vintage</h3></div>
+      </div>
     </section>
-    <!-- Footer sẽ được load bằng JavaScript -->
-    <div id="footer"></div>
-    <script></script>
-    <script src="/javascript/app.js"></script>
+  </main>
 
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- JS -->
+  <script src="/javascript/app.js"></script>
+  <script>
+  // ===== Load sản phẩm nổi bật từ file db.json =====
+  async function loadFeaturedProducts() {
+    try {
+      // Đọc file db.json (đặt cùng cấp hoặc điều chỉnh lại đường dẫn)
+      const res = await fetch("/db.json");
+      const data = await res.json();
+
+      // Lấy danh sách sản phẩm
+      const products = data.Product.slice(0, 4); // lấy 4 sản phẩm đầu
+
+      // 🟢 Thêm dòng này để lấy container hiển thị
+      const container = document.getElementById("featured-products");
+
+      container.innerHTML = products.map(product => `
+        <a href="/HTML/product_detail.html?id=${product.id}" class="product-card">
+          <div class="image_card">
+            <img src="${product.img}" alt="${product.name}">
+          </div>
+          <div class="product_infor">
+            <p>${product.brand}</p>
+            <h3>${product.name}</h3>
+            <div class="icon_card">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="price_card">
+              <span class="official_price">${product.price}</span>
+            </div>
+            <button><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button>
+          </div>
+        </a>
+      `).join("");
+
+    } catch (err) {
+      console.error("❌ Lỗi đọc db.json:", err);
+      const container = document.getElementById("featured-products");
+      container.innerHTML = `<p style="color: red;">Không thể tải sản phẩm. Hãy kiểm tra file db.json!</p>`;
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", loadFeaturedProducts);
+</script>
+
+<script src="/javascript/app.js"></script>
+ <script src="/javascript/product_detail.js"></script>
 
 </body>
-
 </html>

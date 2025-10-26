@@ -1,150 +1,113 @@
-* {
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
-
 body {
-  background: #fafafa;
-  color: #222;
-  margin: 0;
-  padding: 0;
+  background: #000;
+  color: #fff;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
+/* Thanh điều hướng */
+.thanh-dieu-huong {
+  color: #fff;
+}
+.thanh-dieu-huong .back-link {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 30px;
+}
+.thanh-dieu-huong p,
+.thanh-dieu-huong h1 {
+  margin: 30px 0 20px;
 }
 
-h1 {
-  font-size: 28px;
-  margin: 20px 0;
-}
-
-.cart-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 20px;
-}
-
-.cart-item {
+/* Container giỏ hàng */
+.cart-container {
   display: flex;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 16px;
-  align-items: center;
-  gap: 16px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background: #111;
 }
 
-.cart-item img {
+/* Danh sách sản phẩm */
+.danh-sach-san-pham {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.san-pham {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+}
+.san-pham img {
   width: 100px;
   height: 100px;
   border-radius: 8px;
-  object-fit: cover;
 }
-
-.cart-info {
+.thong-tin-san-pham {
   flex: 1;
+  margin: 10px 0 0 20px;
+}
+.thong-tin-san-pham p {
+  color: #09A81A;
 }
 
-.cart-info h3 {
-  margin: 4px 0;
-  font-size: 16px;
-}
-
-.price {
-  color: #007bff;
-  font-weight: bold;
-}
-
-.quantity-controls {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.quantity-controls button {
-  background: none;
-  border: none;
-  padding: 6px 10px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.quantity-controls span {
-  padding: 0 12px;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-}
-
-.remove-btn {
-  color: red;
-  cursor: pointer;
-  font-size: 14px;
-  border: none;
-  background: none;
-}
-
-.summary {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 20px;
+/* Tổng kết đơn hàng */
+.tong-ket-don-hang {
+  flex: 1;
   position: sticky;
-  top: 20px;
+  top: 100px;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  height: fit-content;
 }
-
-.summary-row {
+.tong-ket-don-hang span {
+  color: #09A81A;
+}
+.tong-ket-don-hang p {
   display: flex;
   justify-content: space-between;
-  margin: 8px 0;
+  margin: 10px 0;
 }
-
-.summary-total {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  margin-top: 16px;
-  font-size: 18px;
+.tong-ket-don-hang hr {
+  margin: 25px 0;
 }
-
-.btn {
-  display: inline-block;
+.tong-ket-don-hang .nut-thanh-toan {
+  background: #00e676;
+  color: #000;
+  padding: 12px;
   width: 100%;
-  padding: 10px;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: 10px;
-  font-size: 16px;
+  margin-bottom: 20px;
 }
-
-.btn.primary {
-  background: #007bff;
-  color: white;
+.tong-ket-don-hang .distance {
+  margin-left: 20px;
+}
+.nut-tiep-tuc {
+  background: #000;
+  color: #fff;
+  padding: 12px;
+  width: 100%;
   border: none;
-}
-
-.btn.outline {
-  border: 1px solid #007bff;
-  color: #007bff;
-  background: transparent;
-}
-
-.btn.ghost {
-  border: none;
-  background: none;
-  color: #007bff;
-  font-size: 16px;
+  border-radius: 8px;
   cursor: pointer;
 }
-
-.trust {
-  margin-top: 20px;
-  border-top: 1px solid #eee;
-  padding-top: 10px;
-  color: gray;
-  font-size: 14px;
+.nut-tiep-tuc:hover {
+  background: #00D9FF;
+  color: #000;
+}
+.distance {
+  margin-left: -20px;
+  line-height: 2;
+}
+.distance {
+  margin-left: -20px;
+  line-height: 2;
 }

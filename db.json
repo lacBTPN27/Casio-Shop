@@ -1,14 +1,6 @@
 {
   "Product": [
     {
-      "id": "1",
-      "name": "Đồng Hồ Bonest Gatti 47mm Nam BG5606-A2",
-      "brand": "G-Shock",
-      "img": "https://www.watchstore.vn/wp-content/uploads/2023/11/bg5606-a2-1-917313870-1440319181-1712669090-768x768.jpg",
-      "stock": "50",
-      "price": "6.197.500₫"
-    },
-    {
       "id": "2",
       "name": "Đồng Hồ Bonest Gatti 45mm Nam BG4001-R2",
       "brand": "G-Shock",
@@ -79,10 +71,11 @@
       "img": "https://www.watchstore.vn/wp-content/uploads/2023/11/bg5501-a4-1-1977979114-1746612935-1712668784-768x768.jpg",
       "stock": "35",
       "price": "5.550.500₫"
-      },
+    },
     {
       "id": "11",
-      "name": "Bulova 32mm Nữ 96L273967867","brand": "Omega",
+      "name": "Bulova 32mm Nữ 96L273967867",
+      "brand": "Omega",
       "img": "https://www.watchstore.vn/wp-content/uploads/2022/03/96l273-1712581838-400x400.jpg",
       "stock": "20",
       "price": "10.612.250 ₫"
@@ -171,7 +164,7 @@
   "Account": [
     {
       "id": "1",
-      "name": "Bùi Tiến Lạc",
+      "name": "Bùi Tiến lùi",
       "phone": "0897665645564",
       "email": "lacbui@gmail.com",
       "password": "8805"
@@ -183,7 +176,8 @@
       "email": "nhutnguyen78@gmail.com",
       "password": "nhutnhut78"
     },
-    {"id": "3",
+    {
+      "id": "3",
       "name": "Nguyễn Mạnh",
       "phone": "0965734872",
       "email": "manhhaha@gmail.com",
@@ -194,7 +188,27 @@
       "name": "admin",
       "phone": "0987654321",
       "email": "admin123@123gmail.com",
-      "password": "admin123123"
+      "password": "admin123123",
+      "role": "admin",
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": "2b5b",
+      "username": "Nguyễn Khuyến",
+      "phone": "02569526562",
+      "email": "manh@gmail.com",
+      "password": "123456789",
+      "role": "user",
+      "createdAt": "2025-10-23T17:45:06.611Z"
+    },
+    {
+      "id": "60ac",
+      "username": "Bùi văn a",
+      "phone": "02522212",
+      "email": "mfdf@gmail.com",
+      "password": "123456789",
+      "role": "user",
+      "createdAt": "2025-10-24T02:34:15.282Z"
     }
   ]
-  }
+}

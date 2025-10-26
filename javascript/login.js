@@ -1,6 +1,4 @@
-// ============================
-// login.js – Đăng nhập / Đăng ký bằng JSON Server (db.json)
-// ============================
+// login.js – Đăng nhập / Đăng ký với JSON Server và role
 
 const form = document.getElementById('authForm');
 const toggleBtn = document.getElementById('toggleBtn');
@@ -9,26 +7,28 @@ const phoneField = document.getElementById('phoneField');
 const confirmField = document.getElementById('confirmField');
 const submitBtn = document.querySelector('.submit');
 
-let isLoginMode = true; // Mặc định là đăng nhập
-const API_URL = "http://localhost:3001/Account";
+let isLoginMode = true;
+const API_URL = "http://localhost:3001/Account"; // Địa chỉ JSON Server
 
-// ============================
-// Chuyển đổi giữa login / register
-// ============================
+// ==============================================
+// Chuyển giữa Login / Register
+// ==============================================
 toggleBtn.addEventListener('click', () => {
   isLoginMode = !isLoginMode;
+
   nameField.classList.toggle('hidden', isLoginMode);
   phoneField.classList.toggle('hidden', isLoginMode);
   confirmField.classList.toggle('hidden', isLoginMode);
+
   submitBtn.textContent = isLoginMode ? 'Đăng Nhập' : 'Đăng Ký';
   toggleBtn.textContent = isLoginMode
     ? 'Chưa có tài khoản? Đăng ký ngay'
     : 'Đã có tài khoản? Đăng nhập ngay';
 });
 
-// ============================
+// ==============================================
 // Xử lý khi submit form
-// ============================
+// ==============================================
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
@@ -39,39 +39,43 @@ form.addEventListener('submit', async (e) => {
   const phone = document.getElementById('phone')?.value.trim();
 
   if (isLoginMode) {
-    // ----- ĐĂNG NHẬP -----
+    // ======== ĐĂNG NHẬP ========
     try {
       const res = await fetch(API_URL);
       const users = await res.json();
       const user = users.find(u => u.email === email && u.password === password);
 
       if (!user) {
-        alert("❌ Sai email hoặc mật khẩu!");
+        alert("❌ Email hoặc mật khẩu không đúng!");
         return;
       }
 
-      alert("✅ Đăng nhập thành công!");
+      // Lưu user vào session
       sessionStorage.setItem('currentUser', JSON.stringify(user));
 
-      // Điều hướng theo quyền
-      window.location.href = user.role === "admin"
-        ? "/admin.html"
-        : "/home.html";
+      alert(`✅ Xin chào ${user.name || user.username}!`);
+
+      // Điều hướng dựa vào ROLE
+      if (user.role === "admin") {
+        window.location.href = "/HTML/products.html";
+      } else {
+        window.location.href = "/HTML/index.html";
+      }
 
     } catch (err) {
       console.error("Lỗi đăng nhập:", err);
-      alert("⚠️ Không thể kết nối tới server!");
+      alert("⚠️ Không thể kết nối server!");
     }
 
   } else {
-    // ----- ĐĂNG KÝ -----
+    // ======== ĐĂNG KÝ ========
     if (!name || !phone || !email || !password || !confirmPassword) {
-      alert("⚠️ Vui lòng điền đầy đủ thông tin!");
+      alert("⚠️ Vui lòng nhập đầy đủ thông tin!");
       return;
     }
 
     if (password !== confirmPassword) {
-      alert("❌ Mật khẩu xác nhận không trùng khớp!");
+      alert("❌ Mật khẩu xác nhận không trùng!");
       return;
     }
 
@@ -80,7 +84,7 @@ form.addEventListener('submit', async (e) => {
       const users = await res.json();
 
       if (users.some(u => u.email === email)) {
-        alert("⚠️ Email này đã được đăng ký!");
+        alert("⚠️ Email đã được đăng ký!");
         return;
       }
 
@@ -89,7 +93,7 @@ form.addEventListener('submit', async (e) => {
         phone,
         email,
         password,
-        role: email.includes("admin") ? "admin" : "user",
+        role: "user", // luôn là user khi đăng ký
         createdAt: new Date().toISOString()
       };
 
@@ -101,24 +105,26 @@ form.addEventListener('submit', async (e) => {
 
       if (!addRes.ok) throw new Error("Không thể lưu tài khoản!");
 
-      alert("✅ Đăng ký thành công! Hãy đăng nhập.");
-      toggleBtn.click();
+      alert("✅ Đăng ký thành công! Vui lòng đăng nhập.");
+      toggleBtn.click(); // Quay lại chế độ login
 
     } catch (err) {
       console.error("Lỗi đăng ký:", err);
-      alert("❌ Có lỗi xảy ra khi đăng ký!");
+      alert("❌ Có lỗi khi đăng ký!");
     }
   }
 });
 
-// ============================
-// Kiểm tra đăng nhập tự động
-// ============================
+// Kiểm tra user đã đăng nhập chưa
 window.addEventListener('load', () => {
   const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
   if (currentUser) {
-    window.location.href = currentUser.role === 'admin'
-      ? '/admin.html'
-      : '/home.html';
+    if (currentUser.role === "admin") {
+      window.location.href = "/HTML/products.html";
+    } else {
+      window.location.href = "/HTML/index.html";
+    }
   }
 });
+
+

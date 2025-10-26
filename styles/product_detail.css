@@ -1,19 +1,48 @@
+/* ========== RESET CƠ BẢN ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background-color: #000;
   color: #fff;
   font-family: 'Poppins', sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Giới hạn chiều rộng nội dung chính */
+.product_detail {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+/* ===== HEADER / FOOTER ===== */
+#header,
+#footer {
+  width: 100%;
+  background-color: #111;
+  color: #00ff80;
+  text-align: center;
+  padding: 12px 0;
+  margin-bottom: 30px;
+}
+
+/* Giữa hai phần header – product – footer cách nhau đều */
+#footer {
+  margin-top: 60px;
+}
+
+/* ========== PHẦN CHÍNH SẢN PHẨM ========== */
 .product {
   display: flex;
   gap: 40px;
-  max-width: 1100px;
   width: 100%;
+  justify-content: center;
 }
 
 /* ========== CỘT ẢNH ========== */
@@ -155,8 +184,7 @@ body {
 
 /* ========== SỐ LƯỢNG ========== */
 .cart-quantity {
-  display: flex;
-  align-items: center;
+  display: flex;align-items: center;
   gap: 12px;
   margin-top: 18px;
   font-size: 16px;
@@ -184,14 +212,12 @@ body {
   transition: all 0.2s ease;
 }
 
-/* Nút hover sáng nhẹ */
 .cart-quantity .qty-btn:hover {
   background-color: #2b2b2b;
   border-color: #00ff80;
   color: #00ff80;
 }
 
-/* Ô hiển thị số lượng ở giữa */
 .cart-quantity .quantity {
   width: 50px;
   background-color: #111;
@@ -203,7 +229,6 @@ body {
   font-weight: 600;
 }
 
-/* Bo góc liền mạch */
 .cart-quantity .minus {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
@@ -214,27 +239,8 @@ body {
   border-bottom-right-radius: 8px;
 }
 
-/* Hiệu ứng bấm xuống */
 .cart-quantity .qty-btn:active {
   transform: scale(0.95);
-}
-
-
-.qty-btn {
-  background-color: #111;
-  color: #00ff80;
-  border: 1px solid #00ff80;
-  border-radius: 6px;
-  width: 28px;
-  height: 28px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.qty-btn.quantity {
-  border: none;
-  color: #fff;
-  font-weight: 600;
 }
 
 /* ========== NÚT MUA ========== */

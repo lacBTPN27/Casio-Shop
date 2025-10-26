@@ -1,0 +1,155 @@
+/* SECTION 1 */
+.challenges-1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #0a0a0a;
+  color: #00ff80;
+  text-align: center;
+  padding: 20px;
+}
+
+/* SECTION 2 */
+.challenges-2 p{
+    line-height: 30px;
+}
+.about {         
+    color: white;
+    background-color:#1A1A1A;
+    height: 150px;
+    margin-top: -1px;
+    text-align: center;
+    padding: 20px;
+}
+.about p {
+  margin: 0;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+/* SECTION 3 */
+.challenges-3 {
+  background: #0a0a0a;
+  color: white;
+  height: 350px;               
+  text-align: center;
+  position: relative;
+}
+
+.value-box .icon {
+  margin-top: -30px;
+}
+.center {
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 40px;
+}
+.values-container {
+  display: grid;
+  line-height: 30px;
+  grid-template-columns: repeat(2, 1fr); 
+  text-align: center;
+}
+.values-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: nowrap; /* Đảm bảo 3 box nằm trên 1 hàng */
+}
+.value-box {
+  flex: 1;
+  padding: 15px;
+  color: white;
+  transform: scale(0.9);
+}
+.value-box .icon {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 255, 150, 0.08); /* nền nhẹ */
+  margin-bottom: 15px;
+}
+.value-box .icon i {
+  color: #00ff99;
+  font-size: 1.8rem;
+}
+
+/* SECTION 4 */
+
+.challenges-4 {
+  line-height: 30px;
+  background-color: #1A1A1A;
+  color: white;
+  padding: 100px;  
+  text-align: left;
+  margin-top: 0px;
+}
+.icon i {
+  color: #00ff99; 
+}
+/* Bố cục 2 cột */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap; /* Đảm bảo responsive co giản */
+}
+/* Cột trái */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+/* Cột phải */
+.contact-form {
+  flex: 1;
+  min-width: 350px;
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: -130px;
+}
+/* Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #222;
+  color: white;
+}
+.contact-form button {
+  background-color: #00ff80;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+} 
+.contact-form button:hover {
+  background-color: #00cc66;
+}
+/* Cột trái từng hàng icon + nội dung */
+.info-box {
+  display: flex;
+  align-items: flex-start; /* Giữ icon và chữ trên cùng một hàng */
+  margin-bottom: 25px;
+  gap: 15px;
+}
+.info-box .icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 30%;
+  background-color: rgba(0, 255, 100, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+
+}

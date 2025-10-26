@@ -157,19 +157,15 @@
 
 /* Nút Thêm vào giỏ */
 .product_card button {
-  background-color: #00ff80;
-  color: #000;
-  border: none;
-  border-radius: 0 0 7px 7px;
+  width: 100%;
+  height: 40px;
+  background-color: #00ff88;
+  color: black;
   font-weight: 600;
-  font-size: 1rem;
-  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  transition: background-color 0.25s ease;
+  transition: 0.2s;
 }
 
 .product_card button:hover {

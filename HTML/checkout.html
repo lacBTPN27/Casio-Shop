@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="/styles/checkout.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <div id="header"></div>
+
+  <div class="thanh-dieu-huong">
+    <br><a href="#" class="back" onclick="window.location.href='cart.html'">
+    <p>← Quay lại giỏ hàng</p>
+</a>
+    <h1>Thanh toán</h1>
+  </div>
+  
+
+  <div class="trang-thanh-toan">
+    <div class="cot-trai">
+      <div class="dang-nhap-tai-khoan">
+        <p>Bạn đã có tài khoản?</p><br>
+        <button class="nut-dang-nhap">Đăng nhập để tiếp tục</button>
+      </div>
+
+    <div class="thong-tin-khach-hang">
+    <h2>Thông tin khách hàng</h2>
+
+    <div class="hang-thong-tin">
+        <div class="cot">
+        <p>Họ và tên*</p>
+        <input type="text">
+        </div>
+        <div class="cot">
+        <p>Số điện thoại*</p>
+        <input type="number">
+        </div>
+    </div>
+
+    <div class="cot">
+        <p>Email*</p>
+        <input type="email">
+    </div>
+    </div>
+
+
+
+        <div class="dia-chi-giao-hang">
+        <h2>Địa chỉ giao hàng</h2>
+
+        <div class="cot-dia-chi">
+            <p>Địa chỉ *</p>
+            <input type="text">
+        </div>
+
+        <div class="hang-dia-chi">
+            <div class="cot">
+            <p>Quận/Huyện *</p>
+            <input type="text">
+            </div>
+            <div class="cot">
+            <p>Tỉnh/Thành phố *</p>
+            <input type="text">
+            </div>
+        </div>
+
+        <div class="cot">
+            <p>Ghi chú đơn hàng</p>
+            <textarea placeholder="Ghi chú thêm về đơn hàng (tuỳ chọn)"></textarea>
+        </div>
+        </div>
+
+
+      <div class="phuong-thuc-thanh-toan">
+        <h2>Phương thức thanh toán</h2>
+        <label><input type="radio" name="thanhtoan" checked> Thanh toán khi nhận hàng (COD)</label>
+        <label><input type="radio" name="thanhtoan"> Ví MoMo</label>
+      </div>
+    </div>
+
+    <div class="cot-phai">
+      <div class="don-hang-cua-ban">
+        <h2>Đơn hàng của bạn</h2>
+        <div class="san-pham">
+          <div class="thong-tin-san-pham">
+            <img src="https://product.hstatic.net/1000370129/product/iphone-xs-max-den_dceeba6383c24e34844206f8ffa5845b_master.jpg" alt="Product">
+            <h3>Iphone Xs-max 64gb</h3>
+            <p class="gia">3.290.000 ₫</p>
+          </div>
+        </div>
+
+        <div class="phi-van-chuyen">
+          <p>Phí vận chuyển:</p>
+          <p>Miễn phí</p>
+        </div>
+
+        <div class="tong-cong">
+          <p><strong>Tổng cộng:</strong></p>
+          <p class="gia-tong"><strong>3.290.000 ₫</strong></p>
+        </div>
+        <button class="nut-dat-hang">Đặt hàng</button>
+      </div>
+    </div>
+  </div>
+
+    <div id="footer"></div>
+<script src="/javascript/app.js"></script>
+<script src="/javascript/checkout.js"></script>
+</body>
+</html>

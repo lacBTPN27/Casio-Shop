@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <title>Giỏ hàng</title>
+  <link rel="stylesheet" href="/styles/cart.css" />
+  <script defer src="/javascript/cart.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <div class="thanh-dieu-huong">
+    <a href="shop.html" class="back-link"><p>← Quay lại cửa hàng</p></a>
+    <h1>Giỏ hàng của bạn</h1>
+  </div>
+
+  <div class="cart-container">
+    <div class="danh-sach-san-pham"></div>
+
+    <div class="tong-ket-don-hang">
+      <h2>Tổng đơn hàng</h2>
+      <p>Tạm tính: <span id="tam-tinh">0 ₫</span></p>
+      <p>Phí vận chuyển: <span>Miễn phí</span></p>
+      <hr class="line">
+      <p class="total">Tổng cộng: <span id="tong-cong">0 ₫</span></p>
+      <button class="nut-thanh-toan">Thanh toán</button>
+      <button class="nut-tiep-tuc" onclick="window.location.href='shop.html'">Tiếp tục mua sắm</button>
+      <hr class="line">
+      <ul class="distance">
+        <li>100% hàng chính hãng</li>
+        <li>Bảo hành toàn cầu</li>
+        <li>Đổi trả trong 7 ngày</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+<script src="/javascript/app.js"></script>
+<script src="/javascript/cart.js"></script>
+</body>
+</html>
