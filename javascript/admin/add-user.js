@@ -4,7 +4,7 @@ let isEditing = false;
 let editingId = null;
 
 // Load dữ liệu ban đầu
-fetch('http://localhost:3000/Account')
+fetch('http://localhost:3001/Account')
   .then(res => res.json())
   .then(data => {
     users = data;
@@ -43,7 +43,7 @@ function handleSubmit(e) {
 
   if (isEditing) {
     // --- UPDATE ---
-    fetch(`http://localhost:3000/Account/${editingId}`, {
+    fetch(`http://localhost:3001/Account/${editingId}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: jsonData,
@@ -59,7 +59,7 @@ function handleSubmit(e) {
       .catch(err => console.error('Error updating product:', err));
   } else {
     // --- ADD NEW ---
-    fetch('http://localhost:3000/Account', {
+    fetch('http://localhost:3001/Account', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: jsonData,
@@ -77,7 +77,7 @@ function handleSubmit(e) {
 
 function deleteProduct(id) {
   if (confirm('Bạn có chắc muốn xoá thông tin người dùng này không?')) {
-    fetch(`http://localhost:3000/Account/${id}`, { method: 'DELETE' })
+    fetch(`http://localhost:3001/Account/${id}`, { method: 'DELETE' })
       .then(res => res.ok && (users = users.filter(u => u.id != id)))
       .then(() => renderTable(users))
       .catch(err => console.error('Error deleting product:', err));
