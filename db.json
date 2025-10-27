@@ -5,8 +5,8 @@
       "name": "Đồng Hồ Bonest Gatti 45mm Nam BG4001-R2",
       "brand": "G-Shock",
       "img": "https://www.watchstore.vn/wp-content/uploads/2023/12/bg5804-a2-1-750261156-1218272464-1712669786-768x768.jpg",
-      "stock": "55",
-      "price": "6.448.750₫"
+      "stock": "25",
+      "price": "4.448.750₫"
     },
     {
       "id": "3",
@@ -159,13 +159,21 @@
       "img": "https://www.watchstore.vn/wp-content/uploads/2023/07/mtp-b145d-2a1vdf-1-877534857-585143796-1712665071-400x400.jpg",
       "stock": "20",
       "price": "1.736.800 ₫"
+    },
+    {
+      "id": "1",
+      "name": "Ne Ptilus",
+      "brand": "G-Shock",
+      "img": "https://www.watchstore.vn/wp-content/uploads/2020/11/ga-110gb-1adr-1995959558-852531344-1712563990-768x768.jpg",
+      "stock": "10",
+      "price": "2.000.000"
     }
   ],
   "Account": [
     {
       "id": "1",
       "name": "Bùi Tiến lùi",
-      "phone": "0897665645564",
+      "phone": "08653645452",
       "email": "lacbui@gmail.com",
       "password": "8805"
     },
@@ -209,6 +217,33 @@
       "password": "123456789",
       "role": "user",
       "createdAt": "2025-10-24T02:34:15.282Z"
+    },
+    {
+      "id": "7d34",
+      "username": "Huy võ",
+      "phone": "0365945156",
+      "email": "huy@gmail.com",
+      "password": "123456789",
+      "role": "user",
+      "createdAt": "2025-10-27T05:58:53.689Z"
+    },
+    {
+      "id": "96ed",
+      "username": "Nguyen C",
+      "phone": "0123456789",
+      "email": "C@gmail.com",
+      "password": "012345678",
+      "role": "user",
+      "createdAt": "2025-10-27T14:00:24.743Z"
+    }
+  ],
+  "CurentUser": [
+    {
+      "id": "3",
+      "name": "Nguyễn Mạnh",
+      "phone": "0965734872",
+      "email": "manhhaha@gmail.com",
+      "password": "manhminhman123"
     }
   ]
 }

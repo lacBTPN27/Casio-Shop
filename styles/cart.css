@@ -111,3 +111,20 @@ body {
   margin-left: -20px;
   line-height: 2;
 }
+.nut-tru , .nut-cong {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;  
+
+}
+.delete-btn {
+  background: #ff4444;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;  
+}

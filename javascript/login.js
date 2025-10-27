@@ -50,10 +50,14 @@ form.addEventListener('submit', async (e) => {
         return;
       }
 
-      // Lưu user vào session
-      sessionStorage.setItem('currentUser', JSON.stringify(user));
+  // Lưu user vào session (ngắn hạn) và localStorage (để các trang khác dễ đọc)
+  // Lưu version "safe" (không chứa password) vào localStorage để checkout có thể tự điền
+  const safeUser = { ...user };
+  delete safeUser.password;
+  sessionStorage.setItem('currentUser', JSON.stringify(user));
+  try { localStorage.setItem('currentUser', JSON.stringify(safeUser)); } catch (e) { /* ignore */ }
 
-      alert(`✅ Xin chào ${user.name || user.username}!`);
+  alert(`✅ Xin chào ${user.name || user.username}!`);
 
       // Điều hướng dựa vào ROLE
       if (user.role === "admin") {

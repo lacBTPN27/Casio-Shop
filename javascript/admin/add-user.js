@@ -108,3 +108,16 @@ function resetForm() {
   const modal = bootstrap.Modal.getInstance(document.getElementById('myModal'));
   modal.hide();
 }
+// logout.js — xử lý đăng xuất
+const logoutBtn = document.getElementById('logout-btn'); // nút đăng xuất của bạn
+
+if (logoutBtn) {
+  logoutBtn.addEventListener('click', () => {
+    // Xóa thông tin đăng nhập khỏi session & local
+    sessionStorage.removeItem('currentUser');
+    localStorage.removeItem('currentUser');
+
+    // Chuyển hướng về trang đăng nhập
+    window.location.href = '/HTML/account.html';
+  });
+}

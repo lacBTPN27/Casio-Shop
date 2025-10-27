@@ -18,7 +18,14 @@ body {
   color: #fff;
   margin-bottom: 25px;
 }
-
+.delete-btn {
+  background: #ff4444;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;  
+}
 .thanh-dieu-huong a.back {
   text-decoration: none;
   color: #09a81a;

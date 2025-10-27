@@ -60,6 +60,38 @@ function initializeShopPage() {
     updateTotalProducts(listProductHTML, total);
   }
 
+  // ======= HIỂN THỊ SẢN PHẨM THEO TỪ KHÓA TÌM KIẾM =======
+  function showProductByQuery(query) {
+    const listProductHTML = document.querySelector('.products');
+    const total = document.querySelector('.sum_product');
+    if (!listProductHTML) return;
+
+    const q = (query || '').trim().toLowerCase();
+    let filtered = products.filter(p => {
+      return (
+        p.name && p.name.toLowerCase().includes(q) ||
+        p.brand && p.brand.toLowerCase().includes(q)
+      );
+    });
+
+    listProductHTML.innerHTML = '';
+    if (!q) {
+      // empty query: show all
+      filtered = products;
+    }
+
+    if (filtered.length === 0) {
+      listProductHTML.innerHTML = `<p>Không tìm thấy sản phẩm phù hợp với "${query}"</p>`;
+    } else {
+      filtered.forEach(product => {
+        const productCard = createProductCard(product);
+        listProductHTML.appendChild(productCard);
+      });
+    }
+
+    updateTotalProducts(listProductHTML, total);
+  }
+
   // ======= TẠO THẺ SẢN PHẨM =======
   function createProductCard(product) {
     const card = document.createElement('div');
@@ -82,7 +114,6 @@ function initializeShopPage() {
           </div>
           <div class="price_card">
             <span class="official_price">${product.price}</span>
-            <span class="reduced_price">2.000.000₫</span>
           </div>
         </div>
       </a>
@@ -112,6 +143,20 @@ function initializeShopPage() {
     const defaultBtn = document.querySelector('.filed_type .type .default');
     if (defaultBtn) defaultBtn.classList.add('active');
   }
+
+  // Apply search query from URL or sessionStorage on load
+  const params = new URLSearchParams(window.location.search);
+  const qParam = params.get('q') || sessionStorage.getItem('searchQuery') || '';
+  if (qParam) {
+    // when there's a search query, show by query instead of brand
+    showProductByQuery(qParam);
+  }
+
+  // Listen for search updates dispatched by header when already on shop page
+  window.addEventListener('search-updated', (e) => {
+    const q = e.detail || '';
+    showProductByQuery(q);
+  });
 }
 
 // ===============================
