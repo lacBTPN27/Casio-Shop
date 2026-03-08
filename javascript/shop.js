@@ -122,7 +122,7 @@ function initializeShopPage() {
       </button>
     `;
 
-    // 🛒 Sự kiện "Thêm vào giỏ hàng"
+    // Sự kiện "Thêm vào giỏ hàng"
     card.querySelector('.add-cart-btn').addEventListener('click', (e) => {
       e.preventDefault(); // tránh click dính link
       addToCart(product);
@@ -160,7 +160,7 @@ function initializeShopPage() {
 }
 
 // ===============================
-// 🛒 THÊM GIỎ HÀNG (localStorage)
+// THÊM GIỎ HÀNG (localStorage)
 // ===============================
 function addToCart(product) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -179,11 +179,11 @@ function addToCart(product) {
   }
 
   localStorage.setItem("cart", JSON.stringify(cart));
-  showToast(`✅ Đã thêm "${product.name}" vào giỏ hàng!`);
+  showToast(`Đã thêm "${product.name}" vào giỏ hàng!`);
 }
 
 // ===============================
-// 🔔 TOAST THÔNG BÁO
+//  TOAST THÔNG BÁO
 // ===============================
 function showToast(message) {
   const toast = document.createElement('div');
@@ -211,13 +211,13 @@ function showToast(message) {
 }
 
 // ===============================
-// 🔢 CHUYỂN GIÁ "6.197.500₫" → SỐ
+//  CHUYỂN GIÁ "6.197.500₫" → SỐ
 // ===============================
 function convertPriceToNumber(priceStr) {
   return Number(priceStr.replace(/[^\d]/g, "")) || 0;
 }
 
 // ===============================
-// 🚀 KHỞI TẠO TRANG SHOP
+// KHỞI TẠO TRANG SHOP
 // ===============================
 document.addEventListener('DOMContentLoaded', initializeShopPage);
